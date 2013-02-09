@@ -19,6 +19,7 @@ Samples
 -------
 
 - [Ruby sample application](https://github.com/tradervue/ruby-sample) which uses the Import API.
+- [C# sample applications](https://github.com/tradervue/dotnet-sample) which use the Import API.
 - Command line examples with curl are shown inline below.
 
 Imports
