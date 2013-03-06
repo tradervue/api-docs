@@ -15,6 +15,26 @@ Authentication
 
 You use HTTP Basic authentication to authenticate with the Tradervue API.
 
+Identify your app
+-----------------
+
+You must include a `User-Agent` header that identifies your application, including either a link
+to your application or your email address, with each request. This allows us to get in touch with
+you in case there is a problem (so we can warn you before you're blacklisted), or if we want to
+talk to you about your app!  Something like:
+
+```
+User-Agent: TradeImporter (http://my-tradeimporter.com)
+```
+
+or
+
+```
+User-Agent: MyApp (yourname@example.com)
+```
+
+If you don't supply this header, you will get a HTTP 400 Bad Request response.
+
 Samples
 -------
 
@@ -47,6 +67,7 @@ There are no parameters in the request. From the command line, you can use the f
 ```
 curl -i \
   -H "Accept: application/json" \
+  -H "User-Agent: MyApp (yourname@example.com)"
   -u example:password \
   https://www.tradervue.com/api/v1/imports
 ```
@@ -105,6 +126,7 @@ Here is an example command line to import one execution:
 curl -i \
   -X POST \
   -H "Accept: application/json" \
+  -H "User-Agent: MyApp (yourname@example.com)"
   -H "Content-type: application/json" \
   -u example:password \
   -d '{"allow_duplicates":"false","overlay_commissions":"false","tags":["one","two"],"account_tag":"swing","executions":[{"datetime":"2013-02-7T09:53:34-05:00","symbol":"SPY","quantity":"100","price":"151.05","option":"","commission":"1.00","transfee":"0.04","ecnfee":"0.21"}]}' \
