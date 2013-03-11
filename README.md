@@ -67,7 +67,7 @@ There are no parameters in the request. From the command line, you can use the f
 ```
 curl -i \
   -H "Accept: application/json" \
-  -H "User-Agent: MyApp (yourname@example.com)"
+  -H "User-Agent: MyApp (yourname@example.com)" \
   -u example:password \
   https://www.tradervue.com/api/v1/imports
 ```
@@ -126,7 +126,7 @@ Here is an example command line to import one execution:
 curl -i \
   -X POST \
   -H "Accept: application/json" \
-  -H "User-Agent: MyApp (yourname@example.com)"
+  -H "User-Agent: MyApp (yourname@example.com)" \
   -H "Content-type: application/json" \
   -u example:password \
   -d '{"allow_duplicates":"false","overlay_commissions":"false","tags":["one","two"],"account_tag":"swing","executions":[{"datetime":"2013-02-7T09:53:34-05:00","symbol":"SPY","quantity":"100","price":"151.05","option":"","commission":"1.00","transfee":"0.04","ecnfee":"0.21"}]}' \
