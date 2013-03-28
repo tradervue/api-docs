@@ -5,6 +5,8 @@ The Tradervue API is a REST-style API for [Tradervue](http://www.tradervue.com)
 that uses JSON for serialization, and HTTP Basic authentication over 
 SSL. The API is a work in progress; currently, the only endpoints available are for importing trade data.
 
+Refer to the [change log](https://github.com/tradervue/api-docs/blob/master/CHANGELOG.md) for the history of API changes.
+
 Making a request
 ----------------
 
