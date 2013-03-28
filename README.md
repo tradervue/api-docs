@@ -50,8 +50,11 @@ Imports
 Importing trade data in Tradervue is an asynchronous operation, due to the potentially large amount of
 data being processed and the time it might take. You make one API call to upload trade data and 
 create a new import; you then make
-a second call to retrieve the current status of that import. No new imports can be created until the
-previous status has been read.
+another call to retrieve the status of that import. 
+
+No new imports can be created until the previous import has completed; you can tell when this happens
+by retrieving the status of the prior import. You are not required to retrieve the status, but it is
+the only way to know if the prior import encountered errors or limits.
 
 ### Query import status
 
@@ -59,8 +62,8 @@ To read the import status from the previous import, you will use
 
 `GET /api/v1/imports`
 
-Querying the import status will clear it, so the next import can proceed, unless the status indicates
-there is an import queued or processing.
+Querying the import status will clear it and reset it to "ready", unless the status indicates there 
+is an import queued or processing. This call is not idempotent.
 
 #### Request
 
@@ -76,7 +79,31 @@ curl -i \
 
 #### Response
 
-A successful response will look like:
+If there was no prior import with unread status, the response will look like:
+
+```json
+{
+  "status": "ready"
+}
+```
+
+If there is currently an import in progress, the response will look like:
+
+```json
+{
+  "status": "queued"
+}
+```
+
+or
+
+```json
+{
+  "status": "processing"
+}
+```
+
+If the last import is complete and was successful, the response will look like:
 
 ```json
 {
@@ -220,7 +247,7 @@ or
 }
 ```
 
-If an import is already in progress (or completed, but the status has not yet been read), the new
+If an import is already in progress and not yet completed, the new
 import creation will fail with a HTTP 424:
 
 ```json
