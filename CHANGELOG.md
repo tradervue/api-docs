@@ -1,3 +1,8 @@
+### Apr 9, 2013
+
+- Added `skipped_forex` to import status response, indicating the user is not allowed to
+  import forex trades on his current subscription plan.
+
 ### Mar 28, 2013
 
 - You are no longer required to retrieve the prior import status before starting a new

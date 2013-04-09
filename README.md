@@ -113,7 +113,8 @@ If the last import is complete and was successful, the response will look like:
     "duplicate_count": 0,
     "overquota_count": 0,
     "skipped_futures": false,
-    "skipped_options": false
+    "skipped_options": false,
+    "skipped_forex": false
   }
 }
 ```
@@ -129,6 +130,7 @@ If an error occurred in the last import, the response will look like:
     "overquota_count": 0,
     "skipped_futures": false,
     "skipped_options": false,
+    "skipped_forex": false,
     "error_description": "at least one data row had an invalid quantity",
     "error_execnumber": 1
   }
