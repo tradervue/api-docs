@@ -1,3 +1,9 @@
+### Dec 19, 2013
+
+- Added support for the optional Tradervue-UserId header, for organizations to use to
+  issue API calls on behalf of their users
+
+
 ### Apr 9, 2013
 
 - Added `skipped_forex` to import status response, indicating the user is not allowed to
