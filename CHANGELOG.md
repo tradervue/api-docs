@@ -1,3 +1,12 @@
+### Dec 2, 2015
+
+- Added documentation for trades API, for listing, creating, updating, and deleting trades
+- Added public documentation for user management API, used for managing users using
+  Tradervue for trading firms. This documentation
+  was previously available privately, but is now moving to the repository.
+- Reorganized documentation to separate each API group into its own page, and removed
+  redundant information on each page.
+
 ### Dec 19, 2013
 
 - Added support for the optional Tradervue-UserId header, for organizations to use to
