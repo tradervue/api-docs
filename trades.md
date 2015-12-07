@@ -299,7 +299,7 @@ This will delete the trade, including any executions that make up the trade, and
 From the command line, you can use the following curl command:
 
 ```
-  curl -i \
+curl -i \
   -X DELETE \
   -H "Accept: application/json" \
   -H "User-Agent: MyApp (yourname@example.com)" \
