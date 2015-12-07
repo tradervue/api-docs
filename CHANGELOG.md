@@ -1,3 +1,8 @@
+### Dec 7, 2015
+
+- Added documentation for journal API, for listing, creating, updating, and deleting journal entries
+- Cleaned up some smart quotes in curl samples, which would cause problems when copying/pasting examples
+
 ### Dec 2, 2015
 
 - Added documentation for trades API, for listing, creating, updating, and deleting trades
