@@ -220,7 +220,7 @@ This will delete the entry, if there are no trades completed on that date.
 From the command line, you can use the following curl command:
 
 ```
-  curl -i \
+curl -i \
   -X DELETE \
   -H "Accept: application/json" \
   -H "User-Agent: MyApp (yourname@example.com)" \
