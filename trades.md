@@ -117,7 +117,7 @@ curl -i \
   -H "Accept: application/json" \
   -H "User-Agent: MyApp (yourname@example.com)" \
   -u example:password \
-  "https://www.tradervue.com/api/v1/trades/643888”
+  "https://www.tradervue.com/api/v1/trades/643888"
 ```
 
 #### Response
@@ -187,7 +187,7 @@ curl -i \
   -H "Content-type: application/json" \
   -u example:password \
   -d '{"notes":"here are my notes"}' \
-  "https://www.tradervue.com/api/v1/trades/659080”
+  "https://www.tradervue.com/api/v1/trades/659080"
 ```
 
 A sample JSON request looks like this:
