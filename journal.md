@@ -47,7 +47,7 @@ The response will look like:
 }
 ```
 
-Journal entries will be sorted with the newest entry, based on the date for the entry.
+Journal entries will be sorted with the newest entry first, based on the date for the entry.
 
 While there are no required parameters to retrieve the list of entries, there are several optional parameters you can use:
 
