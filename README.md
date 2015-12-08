@@ -71,4 +71,5 @@ Specific API Documentation
 - [Import API](imports.md) - for importing trades
 - [Trades API](trades.md) - for creating and managing trades
 - [Journal API](journal.md) - for creating and managing journal entries
+- [Journal Notes API](notes.md) - for creating and managing journal notes
 - [User Management API](users.md) - for managing users who belong to an organization

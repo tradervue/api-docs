@@ -1,3 +1,7 @@
+### Dec 8, 2015
+
+- Added documentation for journal notes API, for listing, creating, updating, and deleting journal notes
+
 ### Dec 7, 2015
 
 - Added documentation for journal API, for listing, creating, updating, and deleting journal entries
