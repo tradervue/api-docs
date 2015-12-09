@@ -65,6 +65,16 @@ Samples
 - [C# sample applications](https://github.com/tradervue/dotnet-sample) which use the Import API.
 - Command line examples with curl are shown inline on the API detail pages.
 
+Community
+---------
+
+These are some open-source projects that use the Tradervue API.
+
+- [py-tradervue](https://github.com/nall/py-tradervue) - Python wrapper and command line client example for Tradervue API
+- [tv-importofx](https://github.com/nall/tv-importofx) - Utility to download OFX files from a broker and import them into Tradervue
+
+If there are additional projects we're missing, let us know!
+
 Specific API Documentation
 --------------------------
 
