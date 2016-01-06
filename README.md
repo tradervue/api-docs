@@ -82,4 +82,6 @@ Specific API Documentation
 - [Trades API](trades.md) - for creating and managing trades
 - [Journal API](journal.md) - for creating and managing journal entries
 - [Journal Notes API](notes.md) - for creating and managing journal notes
+- [Executions API](executions.md) - for retrieving the executions for a trade
+- [Comments API](comments.md) - for retrieving the comments on a trade, journal entry, or journal note
 - [User Management API](users.md) - for managing users who belong to an organization

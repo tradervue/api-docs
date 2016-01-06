@@ -1,3 +1,8 @@
+### Jan 6, 2016
+
+- Added support for retrieving comments on trades, journal entries, and journal notes
+- Added documentation for executions API, for retrieving the executions attached to a trade
+
 ### Dec 8, 2015
 
 - Added documentation for journal notes API, for listing, creating, updating, and deleting journal notes
