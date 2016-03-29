@@ -1,3 +1,7 @@
+### Mar 29, 2016
+
+- added exit_price field to trades
+
 ### Jan 6, 2016
 
 - Added support for retrieving comments on trades, journal entries, and journal notes

@@ -43,6 +43,7 @@ The response will look like:
       "fees": 0.06,
       "side": "long",
       "entry_price": 40.75,
+      "exit_price": 40.62,
       "start_datetime": "2013-10-15T13:07:22.000-04:00",
       "end_datetime": "2013-10-15T15:59:16.000-04:00",
       "notes_excerpt": "Second try on pullback trade here, using 15m chart.\r\n\r\nThis one really started to roll around...",
@@ -67,6 +68,7 @@ The response will look like:
       "fees": 0.54,
       "side": "long",
       "entry_price": 41.1,
+      "exit_price": 40.81,
       "start_datetime": "2013-10-15T11:07:32.000-04:00",
       "end_datetime": "2013-10-15T11:37:14.000-04:00",
       "notes_excerpt": "Strong opening drive, then a lower volume pullback.  Entered as a pullback trade on the 15-min as...",
@@ -85,6 +87,8 @@ The response will look like:
 
 Trade results will be sorted with the newest trade first, by trade open date/time. For trades with no executions,
 which have no open time, the creation time of the trade will be used instead.
+
+The exit_price field will be omitted if the trade is open.
 
 While there are no required parameters to retrieve the list of trades, there are several optional parameters you can use:
 
@@ -137,6 +141,7 @@ The response will look like:
   "fees": 0.06,
   "side": "long",
   "entry_price": 40.75,
+  "exit_price": 40.62,
   "start_datetime": "2013-10-15T13:07:22.000-04:00",
   "end_datetime": "2013-10-15T15:59:16.000-04:00",
   "exec_count": 3,
@@ -161,6 +166,8 @@ The response will look like:
   "best_exit_pl_datetime": "2013-10-15T15:36:00.000-04:00"
 }
 ```
+
+Note that the exit_price field will be omitted if the trade is open.
 
 ### Updating a trade
 
