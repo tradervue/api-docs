@@ -1,3 +1,7 @@
+### Aug 22, 2016
+
+- Specify how trade and journal entry creation interacts with the user's notes templates.
+
 ### Mar 29, 2016
 
 - added exit_price field to trades

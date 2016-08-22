@@ -183,6 +183,9 @@ A sample JSON request looks like this:
 
 The date field is required, and must be in yyyy-mm-dd format; all other fields are optional.
 
+If the notes field is specified (even if an empty string), the notes in the new entry will be set to that.
+If the notes field is omitted, the notes will be set from the user's default journal notes template.
+
 #### Response
 
 If successful, you will get a HTTP 201 response with a Location header containing the new entry's URL:

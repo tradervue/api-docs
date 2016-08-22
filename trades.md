@@ -269,6 +269,9 @@ A sample JSON request looks like this:
 
 The symbol field is required; all other fields are optional.
 
+If the notes field is specified (even if an empty string), the notes in the new trade will be set to that.
+If the notes field is omitted, the notes will be set from the user's default trade notes template.
+
 #### Response
 
 If successful, you will get a HTTP 201 response with a Location header containing the new trade's URL:
