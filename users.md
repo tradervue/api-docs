@@ -172,7 +172,7 @@ A sample JSON request looks like this:
 }
 ```
 
-All fields shown are required.
+The username, plan, email, and password fields shown are required.
 
 To create a user with a trial period, include the `trial_end` parameter, as in the following example:
 
@@ -188,6 +188,36 @@ To create a user with a trial period, include the `trial_end` parameter, as in t
 
 If you specify an invalid trial end date, or one that exceeds the maximum trial length for your
 organization, you will get a 400 error and the user will not be created. 
+
+You can also specify certain optional settings that the user will be created with, as in the following example:
+
+```json
+{
+  "username": "test3",
+  "plan": "Gold",
+  "email": "test3@example.com",
+  "password": "the_password",
+  "settings": {
+    "merge_mode": "force_split",
+    "commission_stocks": "1.01",
+    "commission_options": "1.25",
+    "commission_futures": "2.05",
+    "mentor": 124
+  }
+}
+```
+
+The available settings are as follows (all optional):
+
+- `merge_mode` - this can be one of `normal`, `force_split`, or `force_merge`. If you omit this field, `normal` is assumed.
+
+- `commission_stocks` - the default per-share commission to be used for stock executions in imports where no commission is specified.
+
+- `commission_options` - the default per-contract commission to be used for option executions in imports where no commission is specified.
+
+- `commission_futures` - the default per-contract commission to be used for futures executions in imports where no commission is specified.
+
+- `mentor` - the ID of a user in your organization to be added as the new user's mentor. The mentor must exist in your organization, and be eligible to be a mentor (i.e. on the silver or gold plan). The new user will see that the mentor has been added in their activity feed.
 
 #### Response
 
