@@ -202,7 +202,17 @@ You can also specify certain optional settings that the user will be created wit
     "commission_stocks": "1.01",
     "commission_options": "1.25",
     "commission_futures": "2.05",
-    "mentor": 124
+    "mentor": 124,
+    "charts": [
+      {
+        "type": "candlestick",
+        "timeframe": "d"
+      },
+      {
+        "type": "ohlc",
+        "timeframe": "m15"
+      }
+    ]
   }
 }
 ```
@@ -218,6 +228,26 @@ The available settings are as follows (all optional):
 - `commission_futures` - the default per-contract commission to be used for futures executions in imports where no commission is specified.
 
 - `mentor` - the ID of a user in your organization to be added as the new user's mentor. The mentor must exist in your organization, and be eligible to be a mentor (i.e. on the silver or gold plan). The new user will see that the mentor has been added in their activity feed.
+
+- `charts` - the initial default chart settings for the user. You can specify up to 4 charts to be shown by default on
+each of the user's trades; parameters for each chart are as follows:
+
+  - `type` - this can be either `candlestick` or `ohlc`. Additional chart types are available for the user to choose interactively.
+
+  - `timeframe` - this can be one of:
+
+    - `r` - monthly
+    - `w` - weekly
+    - `d` - daily
+    - `m60` - 60 minute
+    - `m30` - 30 minute
+    - `m15` - 15 minute
+    - `m10` - 10 minute
+    - `m5` - 5 minute
+    - `m3` - 3 minute
+    - `m2` - 2 minute
+    - `m1` - 1 minute
+
 
 #### Response
 
