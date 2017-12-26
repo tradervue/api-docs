@@ -73,6 +73,7 @@ These are some open-source projects that use the Tradervue API.
 
 - [py-tradervue-api](https://github.com/nall/py-tradervue-api) - Python wrapper and command line client example for Tradervue API
 - [tv-importofx](https://github.com/nall/tv-importofx) - Utility to download OFX files from a broker and import them into Tradervue
+- [qc](https://github.com/jorgemanrubia/qc) - Command-line utility for syncing and running your backtests in QuantConnect, and importing the results into Tradervue
 
 If there are additional projects we're missing, let us know!
 
