@@ -1,3 +1,8 @@
+### Mar 04, 2025
+
+- Added `last_login` field to User/List and User/Show endpoints
+- Updated documenation to reflect Tradervue's URL change to app.tradervue.com
+
 ### Aug 22, 2016
 
 - Specify how trade and journal entry creation interacts with the user's notes templates.

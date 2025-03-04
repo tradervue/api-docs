@@ -6,10 +6,11 @@ Users in an organization can be managed by the organization's manager using the 
 Making a request
 ----------------
 
-All URLs start with `https://www.tradervue.com/api/v1`, and are accessible via SSL only. The
-actual hostname should be your organization's URL; so for example, if you access your site
-at `https://traders-r-us.tradervue.com`, then the API root will be 
-`https://traders-r-us.tradervue.com/api/v1`.
+All URLs start with `https://app.tradervue.com/api/v1`, and are accessible via SSL only.
+
+**Important:** The actual hostname should be your organization's URL; so for example, if you access your site
+at `https://your-org.tradervue.com`, then the API root will be
+`https://your-org.tradervue.com/api/v1`.
 
 Authentication
 --------------
@@ -35,7 +36,7 @@ curl -i \
   -H "Accept: application/json" \
   -H "User-Agent: MyApp (yourname@example.com)" \
   -u example:password \
-  https://www.tradervue.com/api/v1/users
+  https://your-org.tradervue.com/api/v1/users
 ```
 
 #### Response
@@ -50,14 +51,16 @@ The response will look like:
       "username": "test1",
       "email": "test1@example.com",
       "plan": "Free",
-      "billing_mode": "Tradervue CC"
+      "billing_mode": "Tradervue CC",
+      "last_login": "2023-09-06T08:05:41.294-04:00"
     },
     {
       "id": 10001,
       "username": "test2",
       "email": "test2@example.com",
       "plan": "Silver",
-      "billing_mode": "Managed"
+      "billing_mode": "Managed",
+      "last_login": "2025-01-07T13:09:04.702-05:00"
     }
   ]
 }
@@ -78,7 +81,7 @@ curl -i \
   -H "Accept: application/json" \
   -H "User-Agent: MyApp (yourname@example.com)" \
   -u example:password \
-  https://www.tradervue.com/api/v1/users/10001
+  https://your-org.tradervue.com/api/v1/users/10001
 ```
 
 #### Response
@@ -91,7 +94,8 @@ The response will look like:
   "username": "test2",
   "email": "test2@example.com",
   "plan": "Silver",
-  "billing_mode": "Managed"
+  "billing_mode": "Managed",
+  "last_login": "2023-09-06T08:05:41.294-04:00"
 }
 ```
 
@@ -113,7 +117,7 @@ curl -i \
   -H "User-Agent: MyApp (yourname@example.com)" \
   -u example:password \
   -d '{"plan":"Gold"}' \
-  https://www.tradervue.com/api/v1/users/10001
+  https://your-org.tradervue.com/api/v1/users/10001
 ```
 
 A sample JSON request looks like this:
@@ -158,7 +162,7 @@ curl -i \
   -H "User-Agent: MyApp (yourname@example.com)" \
   -u example:password \
   -d '{"username":"test3","plan":"Gold","email":"test3@example.com","password":"the_password"}' \
-  https://www.tradervue.com/api/v1/users
+  https://your-org.tradervue.com/api/v1/users
 ```
 
 A sample JSON request looks like this:
@@ -187,7 +191,7 @@ To create a user with a trial period, include the `trial_end` parameter, as in t
 ```
 
 If you specify an invalid trial end date, or one that exceeds the maximum trial length for your
-organization, you will get a 400 error and the user will not be created. 
+organization, you will get a 400 error and the user will not be created.
 
 You can also specify certain optional settings that the user will be created with, as in the following example:
 
@@ -254,7 +258,7 @@ each of the user's trades; parameters for each chart are as follows:
 If successful, you will get a HTTP 201 response with a Location header containing the new user's URL:
 
 ```
-Location: https://www.tradervue.com/api/v1/users/170
+Location: https://your-org.tradervue.com/api/v1/users/170
 ```
 
 The JSON response will include the new user's ID:

@@ -22,7 +22,7 @@ curl -i \
   -H "Accept: application/json" \
   -H "User-Agent: MyApp (yourname@example.com)" \
   -u example:password \
-  "https://www.tradervue.com/api/v1/notes"
+  "https://app.tradervue.com/api/v1/notes"
 ```
 
 #### Response
@@ -57,7 +57,7 @@ page      | Specifies which page of results you want. For example, if you want r
 
 ### Displaying a single journal note
 
-You can retrieve details about a particular note by using 
+You can retrieve details about a particular note by using
 
 `GET /api/v1/notes/{id}`
 
@@ -70,7 +70,7 @@ curl -i \
   -H "Accept: application/json" \
   -H "User-Agent: MyApp (yourname@example.com)" \
   -u example:password \
-  "https://www.tradervue.com/api/v1/notes/11433"
+  "https://app.tradervue.com/api/v1/notes/11433"
 ```
 
 #### Response
@@ -107,7 +107,7 @@ curl -i \
   -H "Content-type: application/json" \
   -u example:password \
   -d '{"notes":"here are my updated notes"}' \
-  "https://www.tradervue.com/api/v1/notes/12274"
+  "https://app.tradervue.com/api/v1/notes/12274"
 ```
 
 A sample JSON request looks like this:
@@ -153,7 +153,7 @@ curl -i \
   -H "Content-type: application/json" \
   -u example:password \
   -d '{"notes":"My notes."}' \
-  "https://www.tradervue.com/api/v1/notes"
+  "https://app.tradervue.com/api/v1/notes"
 ```
 
 A sample JSON request looks like this:
@@ -169,7 +169,7 @@ A sample JSON request looks like this:
 If successful, you will get a HTTP 201 response with a Location header containing the new note's URL:
 
 ```
-Location: https://www.tradervue.com/api/v1/notes/13922
+Location: https://app.tradervue.com/api/v1/notes/13922
 ```
 
 The JSON response will include the new note's ID:
@@ -207,7 +207,7 @@ curl -i \
   -H "User-Agent: MyApp (yourname@example.com)" \
   -H "Content-type: application/json" \
   -u example:password \
-  "https://www.tradervue.com/api/v1/notes/22496"
+  "https://app.tradervue.com/api/v1/notes/22496"
 ```
 
 If the note wasn't found, you will get a HTTP 404.

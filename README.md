@@ -2,7 +2,7 @@ Tradervue API
 =============
 
 The Tradervue API is a REST-style API for [Tradervue](http://www.tradervue.com)
-that uses JSON for serialization, and HTTP Basic authentication over 
+that uses JSON for serialization, and HTTP Basic authentication over
 SSL.
 
 Refer to the [change log](CHANGELOG.md) for the history of API changes.
@@ -10,7 +10,7 @@ Refer to the [change log](CHANGELOG.md) for the history of API changes.
 Making a request
 ----------------
 
-All URLs start with `https://www.tradervue.com/api/v1`, and are accessible via SSL only.
+All URLs start with `https://app.tradervue.com/api/v1`, and are accessible via SSL only.
 
 Authentication
 --------------
@@ -55,7 +55,7 @@ Tradervue-UserId: 78914
 If you do not have permission to issue API calls for the specified user, you will get a HTTP 403
 Not Authorized response.
 
-*Note: the "X-" prefix for non-standard headers has been deprecated 
+*Note: the "X-" prefix for non-standard headers has been deprecated
 in [RFC 6648](http://tools.ietf.org/html/rfc6648), which is why it is not used here.*
 
 Samples

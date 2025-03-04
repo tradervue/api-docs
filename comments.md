@@ -21,7 +21,7 @@ curl -i \
   -H "Accept: application/json" \
   -H "User-Agent: MyApp (yourname@example.com)" \
   -u example:password \
-  "https://www.tradervue.com/api/v1/trades/421249/comments"
+  "https://app.tradervue.com/api/v1/trades/421249/comments"
 ```
 
 ### Listing comments for journal entries
@@ -39,7 +39,7 @@ curl -i \
   -H "Accept: application/json" \
   -H "User-Agent: MyApp (yourname@example.com)" \
   -u example:password \
-  "https://www.tradervue.com/api/v1/journal/11473/comments"
+  "https://app.tradervue.com/api/v1/journal/11473/comments"
 ```
 
 ### Listing comments for journal notes
@@ -57,7 +57,7 @@ curl -i \
   -H "Accept: application/json" \
   -H "User-Agent: MyApp (yourname@example.com)" \
   -u example:password \
-  "https://www.tradervue.com/api/v1/notes/114712/comments"
+  "https://app.tradervue.com/api/v1/notes/114712/comments"
 ```
 
 ### Response
