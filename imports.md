@@ -7,9 +7,9 @@ Imports
 -------
 
 Importing trade data in Tradervue is an asynchronous operation, due to the potentially large amount of
-data being processed and the time it might take. You make one API call to upload trade data and 
+data being processed and the time it might take. You make one API call to upload trade data and
 create a new import; you then make
-another call to retrieve the status of that import. 
+another call to retrieve the status of that import.
 
 No new imports can be created until the previous import has completed; you can tell when this happens
 by retrieving the status of the prior import. You are not required to retrieve the status, but it is
@@ -21,7 +21,7 @@ To read the import status from the previous import, you will use
 
 `GET /api/v1/imports`
 
-Querying the import status will clear it and reset it to "ready", unless the status indicates there 
+Querying the import status will clear it and reset it to "ready", unless the status indicates there
 is an import queued or processing. This call is not idempotent.
 
 #### Request
@@ -33,7 +33,7 @@ curl -i \
   -H "Accept: application/json" \
   -H "User-Agent: MyApp (yourname@example.com)" \
   -u example:password \
-  https://www.tradervue.com/api/v1/imports
+  https://app.tradervue.com/api/v1/imports
 ```
 
 #### Response
@@ -120,7 +120,7 @@ curl -i \
   -H "Content-type: application/json" \
   -u example:password \
   -d '{"allow_duplicates":"false","overlay_commissions":"false","tags":["one","two"],"account_tag":"swing","executions":[{"datetime":"2013-02-7T09:53:34-05:00","symbol":"SPY","quantity":"100","price":"151.05","option":"","commission":"1.00","transfee":"0.04","ecnfee":"0.21"}]}' \
-  https://www.tradervue.com/api/v1/imports
+  https://app.tradervue.com/api/v1/imports
 ```
 
 A sample JSON request looks like this:
@@ -157,13 +157,13 @@ A sample JSON request looks like this:
 ```
 
 The datetime for each execution should be in ISO 8601 format (as shown above), but most date/time formats
-supported by the Tradervue [generic import format](http://www.tradervue.com/help/generic) should work if 
+supported by the Tradervue [generic import format](http://app.tradervue.com/help/generic) should work if
 combined into a single field (e.g. 2012-07-02 09:35:02).
 
 The quantity for each execution should be positive for a buy, and negative for a sell.
 
-For more details on each execution-related parameter, refer to the 
-[Generic Import Format documentation](http://www.tradervue.com/help/generic).
+For more details on each execution-related parameter, refer to the
+[Generic Import Format documentation](http://app.tradervue.com/help/generic).
 
 The other fields in the request are:
 
@@ -171,13 +171,13 @@ The other fields in the request are:
 when importing this data.
 
 - `overlay_commissions` - runs this import in commission-overlay mode; no new trades will be created, and
-existing trades will be updated with commission and fee data. See the Tradervue 
-[help article](http://www.tradervue.com/help/older_commissions) for more details.
+existing trades will be updated with commission and fee data. See the Tradervue
+[help article](http://app.tradervue.com/help/older_commissions) for more details.
 
 - `tags` - this is an array of tags you want applied to each new trade created in this import.
 
 - `account_tag` - allows you to specify an account tag to be used for the import; see
-[Account Tags](http://www.tradervue.com/help/account_tags) for more details.
+[Account Tags](http://app.tradervue.com/help/account_tags) for more details.
 
 Some features may not be functional depending on the subscription of the user; the same restrictions found
 in the Tradervue application are also enforced when using the API.

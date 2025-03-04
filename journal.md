@@ -21,7 +21,7 @@ curl -i \
   -H "Accept: application/json" \
   -H "User-Agent: MyApp (yourname@example.com)" \
   -u example:password \
-  "https://www.tradervue.com/api/v1/journal"
+  "https://app.tradervue.com/api/v1/journal"
 ```
 
 #### Response
@@ -61,7 +61,7 @@ enddate   | Filters results to entries on or before the end date, formatted as m
 
 ### Displaying a single journal entry
 
-You can retrieve details about a particular entry by using 
+You can retrieve details about a particular entry by using
 
 `GET /api/v1/journal/{id}`
 
@@ -74,7 +74,7 @@ curl -i \
   -H "Accept: application/json" \
   -H "User-Agent: MyApp (yourname@example.com)" \
   -u example:password \
-  "https://www.tradervue.com/api/v1/journal/12274"
+  "https://app.tradervue.com/api/v1/journal/12274"
 ```
 
 #### Response
@@ -98,7 +98,7 @@ The response will look like:
 }
 ```
 
-The `trade_ids` field will be an array of the id's of all of the trades that were completed, opened, 
+The `trade_ids` field will be an array of the id's of all of the trades that were completed, opened,
 closed, or adjusted on that date. Details about the trades can be retrieved with the [Trades API](trades.md).
 
 ### Updating a journal entry
@@ -123,7 +123,7 @@ curl -i \
   -H "Content-type: application/json" \
   -u example:password \
   -d '{"notes":"here are my updated notes"}' \
-  "https://www.tradervue.com/api/v1/journal/12274"
+  "https://app.tradervue.com/api/v1/journal/12274"
 ```
 
 A sample JSON request looks like this:
@@ -169,7 +169,7 @@ curl -i \
   -H "Content-type: application/json" \
   -u example:password \
   -d '{"date":"2015-12-05", "notes":"My notes for the day."}' \
-  "https://www.tradervue.com/api/v1/journal"
+  "https://app.tradervue.com/api/v1/journal"
 ```
 
 A sample JSON request looks like this:
@@ -191,7 +191,7 @@ If the notes field is omitted, the notes will be set from the user's default jou
 If successful, you will get a HTTP 201 response with a Location header containing the new entry's URL:
 
 ```
-Location: https://www.tradervue.com/api/v1/journal/13944
+Location: https://app.tradervue.com/api/v1/journal/13944
 ```
 
 The JSON response will include the new entry's ID:
@@ -229,7 +229,7 @@ curl -i \
   -H "User-Agent: MyApp (yourname@example.com)" \
   -H "Content-type: application/json" \
   -u example:password \
-  "https://www.tradervue.com/api/v1/journal/62245"
+  "https://app.tradervue.com/api/v1/journal/62245"
 ```
 
 If the journal entry could not be deleted, because there were trades completed on that date, you will get a HTTP 400 with a JSON response like

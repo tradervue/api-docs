@@ -21,7 +21,7 @@ curl -i \
   -H "Accept: application/json" \
   -H "User-Agent: MyApp (yourname@example.com)" \
   -u example:password \
-  "https://www.tradervue.com/api/v1/trades/659082/executions"
+  "https://app.tradervue.com/api/v1/trades/659082/executions"
 ```
 
 #### Response

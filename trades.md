@@ -21,7 +21,7 @@ curl -i \
   -H "Accept: application/json" \
   -H "User-Agent: MyApp (yourname@example.com)" \
   -u example:password \
-  "https://www.tradervue.com/api/v1/trades"
+  "https://app.tradervue.com/api/v1/trades"
 ```
 
 #### Response
@@ -108,7 +108,7 @@ interactive reports, and examine the URL immediately after narrowing the filter,
 
 ### Displaying a single trade
 
-You can retrieve details about a particular trade by using 
+You can retrieve details about a particular trade by using
 
 `GET /api/v1/trades/{id}`
 
@@ -121,7 +121,7 @@ curl -i \
   -H "Accept: application/json" \
   -H "User-Agent: MyApp (yourname@example.com)" \
   -u example:password \
-  "https://www.tradervue.com/api/v1/trades/643888"
+  "https://app.tradervue.com/api/v1/trades/643888"
 ```
 
 #### Response
@@ -194,7 +194,7 @@ curl -i \
   -H "Content-type: application/json" \
   -u example:password \
   -d '{"notes":"here are my notes"}' \
-  "https://www.tradervue.com/api/v1/trades/659080"
+  "https://app.tradervue.com/api/v1/trades/659080"
 ```
 
 A sample JSON request looks like this:
@@ -249,7 +249,7 @@ curl -i \
   -H "Content-type: application/json" \
   -u example:password \
   -d '{"symbol":"AAAA","notes":"foo","initial_risk":25.0,"shared":false,"tags":["tag1","tag2"]}' \
-  "https://www.tradervue.com/api/v1/trades"
+  "https://app.tradervue.com/api/v1/trades"
 ```
 
 A sample JSON request looks like this:
@@ -277,7 +277,7 @@ If the notes field is omitted, the notes will be set from the user's default tra
 If successful, you will get a HTTP 201 response with a Location header containing the new trade's URL:
 
 ```
-Location: https://www.tradervue.com/api/v1/trades/12345
+Location: https://app.tradervue.com/api/v1/trades/12345
 ```
 
 The JSON response will include the new trade's ID:
@@ -315,5 +315,5 @@ curl -i \
   -H "User-Agent: MyApp (yourname@example.com)" \
   -H "Content-type: application/json" \
   -u example:password \
-  "https://www.tradervue.com/api/v1/trades/46525"
+  "https://app.tradervue.com/api/v1/trades/46525"
 ```
