@@ -97,7 +97,8 @@ Parameter | Description |
 count     | Specifies how many trades you want back at a time. Defaults to 25, max is 100. |
 page      | Specifies which page of results you want. For example, if you want results 26-50, use count=25&page=2. |
 symbol    | Filter results to a specific symbol, e.g. symbol=AAPL |
-tag       | Filter results to trades with a specific tag, e.g. tag=MyTag |
+ortags    | Filter results to trades that contains at least of the specified tags, e.g. ortags=MyTag or ortags=MyTag,TagTwo |
+andtags   | Filter results to trades that contains all of the tags specified tags, e.g. andtags=MyTag or andtags=MyTag,TagTwo |
 startdate | Filter results to trades opened on or after the start date, formatted as mm/dd/yyyy (URL-encode the slashes in your request) |
 enddate   | Filter results to trades opened on or before the enddate date, formatted as mm/dd/yyyy (URL-encode the slashes in your request) |
 side      | Filter results to long or short trades only. Use side=L for long, and side=S for short. |
@@ -105,6 +106,8 @@ duration  | Filter results by intraday or multiday trades. Use duration=I for in
 
 There are a number of other filter options that can be used; if you build a filter on the Tradervue web site using the drill-down
 interactive reports, and examine the URL immediately after narrowing the filter, you will see some of the available filter parameters.
+
+All parameters should be sent as query strings in the URL, for example: `/api/v1/trades?ortags=MyTag&side=S`
 
 ### Displaying a single trade
 
